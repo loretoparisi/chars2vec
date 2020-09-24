@@ -231,6 +231,7 @@ def train_model(emb_dim, X_train, y_train, model_chars,
         raise TypeError("parameter 'model_chars' must be a list or numpy.ndarray")
 
     char_to_ix = {ch: i for i, ch in enumerate(model_chars)}
+    print(char_to_ix)
     c2v_model = Chars2Vec(emb_dim, char_to_ix)
 
     targets = [float(el) for el in y_train]

@@ -3,7 +3,7 @@ import chars2vec
 
 dim = 50
 
-path_to_model = 'path/to/model/directory'
+path_to_model = './'
 
 X_train = [('mecbanizing', 'mechanizing'), # similar words, target is equal 0
            ('dicovery', 'dis7overy'), # similar words, target is equal 0
@@ -32,3 +32,4 @@ words = ['list', 'of', 'words']
 # Load pretrained model, create word embeddings
 c2v_model = chars2vec.load_model(path_to_model)
 word_embeddings = c2v_model.vectorize_words(words)
+word_embeddings['of']
