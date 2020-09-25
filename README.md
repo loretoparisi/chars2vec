@@ -120,3 +120,25 @@ c2v_model = chars2vec.load_model(path_to_model)
 
 Full code examples for usage and training models see in
 `example_usage.py` and `example_training.py` files.
+
+### Experiments
+I suggest to install into a virtual env:
+```
+python -m venv .venv
+. .venv/bin/activate
+pip install -r requirements
+```
+
+If you experience installation problems with `keras` or `tensorflow` versions, please do the following:
+
+```
+python -c "import keras; print(keras.__version__);"
+python -c "import tensorflow as tf; print(tf.__version__);"
+```
+
+and then check if you are stuck to the right versions
+
+```
+python3 -m pip install -U --force-reinstall tensorflow==1.14.0
+python3 -m pip install -U --force-reinstall keras==2.1.4
+```
